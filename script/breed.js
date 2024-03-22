@@ -64,6 +64,7 @@ const deletePet2 = (petId2) => {
   if (confirm("Are you sure")) {
     for (let i = 0; i < breedArr.length; i++) {
       if (petId2 === breedArr[i].breed) {
+	       breedArr.splice(i, 1);
         saveToStorage("breedArr", breedArr);
         renderTableBreed(breedArr);
       }
